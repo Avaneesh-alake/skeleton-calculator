@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            JS Calculator 
+        </title>
+        <!--<script src="js.js"></script>-->
+
+        <script>
+            function operation()
+{
+  var n1 =parseFloat(document.getElementById('num1').value);
+  var n2 = parseFloat(document.getElementById('num2').value); 
+  
+  document.getElementById("add").addEventListener("click", function(){
+    document.getElementById("result").value=n1+n2;
+  }); 
+
+  document.getElementById("min").addEventListener("click", function(){
+    document.getElementById("result").value=n1-n2;
+  }); 
+
+  document.getElementById("div").addEventListener("click", function(){
+    document.getElementById("result").value=n1/n2;
+  }); 
+
+  document.getElementById("mul").addEventListener("click", function(){
+    document.getElementById("result").value=n1*n2;
+  }); 
+}
+        </script>
+
+
+    </head>
+
+    <body>
+        <input type="text" id="num1"/> Number 1 <br><br>
+        <input type="text" id="num2"/> Number 2 <br><br>
+        
+            <button id="add" onclick="operation()">+</button>
+            <button id="min" onclick="operation()">-</button>
+            <button id="div" onclick="operation()">/</button>
+            <button id="mul" onclick="operation()">*</button>
+        
+        <input type="text" id="result"/> Result <br>
+
+    </body>
+</html>
